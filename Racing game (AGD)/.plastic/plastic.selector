@@ -1,0 +1,4 @@
+repository "Racing game (AGD)@Animazione_GameDesign@cloud"
+  path "/"
+    br "/main"
+    co "/main"
