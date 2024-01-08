@@ -14,6 +14,7 @@ public class CountdownScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(CountStart());
+        TimerGiro.SetActive(false);
         CarUserControl.GetComponent<ControllerAuto>().enabled = false;
     }
 
