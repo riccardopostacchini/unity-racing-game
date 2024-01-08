@@ -14,8 +14,12 @@ public class GiroCompleto : MonoBehaviour
 
     public GameObject BoxGiro;
 
+    public GameObject ContoGiri;
+    public int GiriCompletati;
+
     private void OnTriggerEnter(Collider other)
     {
+        GiriCompletati += 1;
         if (TimerGiro.Secondi <= 9)
         {
             Secondi.GetComponent<Text>().text = "0" + TimerGiro.Secondi + ".";
@@ -45,6 +49,7 @@ public class GiroCompleto : MonoBehaviour
         TimerGiro.Minuti = 0;
         TimerGiro.Secondi = 0;
         TimerGiro.Millisecondi = 0;
+        ContoGiri.GetComponent<Text>().text = "" + GiriCompletati; 
 
         Checkpoint.SetActive(true);
         GiroTrigger.SetActive(false);
