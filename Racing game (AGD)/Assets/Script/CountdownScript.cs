@@ -39,7 +39,9 @@ public class CountdownScript : MonoBehaviour
         CountDown.SetActive(true);
         yield return new WaitForSeconds(1);
         CountDown.SetActive(false);
+        CountDown.GetComponent<Text>().text = "VIA!";
         GoAudio.Play();
+        CountDown.SetActive(true);
         LevelMusic.Play();
         TimerGiro.SetActive(true);
         CarUserControl.GetComponent<ControllerAuto>().enabled = true;
