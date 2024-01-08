@@ -11,6 +11,7 @@ public class CountdownScript : MonoBehaviour
     public GameObject TimerGiro;
     public GameObject ControlliAuto;
     public GameObject CarUserControl;
+    public AudioSource LevelMusic;
     void Start()
     {
         StartCoroutine(CountStart());
@@ -38,6 +39,7 @@ public class CountdownScript : MonoBehaviour
         yield return new WaitForSeconds(1);
         CountDown.SetActive(false);
         GoAudio.Play();
+        LevelMusic.Play();
         TimerGiro.SetActive(true);
         CarUserControl.GetComponent<ControllerAuto>().enabled = true;
     }

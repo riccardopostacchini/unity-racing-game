@@ -36,6 +36,12 @@ public class GiroCompleto : MonoBehaviour
 
         Millisecondi.GetComponent<Text>().text = "" + TimerGiro.Millisecondi;
 
+    
+            PlayerPrefs.SetInt("MinSave", TimerGiro.Minuti);
+            PlayerPrefs.SetInt("SecSave", TimerGiro.Secondi);
+            PlayerPrefs.SetFloat("MilliSave", TimerGiro.Millisecondi);
+        
+
         TimerGiro.Minuti = 0;
         TimerGiro.Secondi = 0;
         TimerGiro.Millisecondi = 0;
