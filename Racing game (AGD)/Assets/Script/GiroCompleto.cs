@@ -27,7 +27,7 @@ public class GiroCompleto : MonoBehaviour
     }
     private void Update()
     {
-        if (GiriCompletati == 3)
+        if (GiriCompletati == 1)
         {
             FineGara.SetActive(true);
         }
@@ -65,6 +65,7 @@ public class GiroCompleto : MonoBehaviour
             PlayerPrefs.SetFloat("MilliSave", TimerGiro.Millisecondi);
             PlayerPrefs.SetFloat("RawTime", TimerGiro.RawTime);
 
+       
         TimerGiro.Minuti = 0;
         TimerGiro.Secondi = 0;
         TimerGiro.Millisecondi = 0;

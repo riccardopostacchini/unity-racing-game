@@ -12,6 +12,7 @@ public class FineGara : MonoBehaviour
     public GameObject TriggerCompleto;
     public GameObject BoxGiri;
     public GameObject BoxTimer;
+    public GameObject MenuFine;
     public AudioSource MusicaFinish;
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +28,7 @@ public class FineGara : MonoBehaviour
         CameraFinish.SetActive(true);
         BGMLivello.SetActive(false);
         ViewModes.SetActive(false);
+        MenuFine.SetActive(true);
         MusicaFinish.Play();
     }
 }
