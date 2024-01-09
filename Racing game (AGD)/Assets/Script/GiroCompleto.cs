@@ -27,7 +27,7 @@ public class GiroCompleto : MonoBehaviour
     }
     private void Update()
     {
-        if (GiriCompletati == 1)
+        if (GiriCompletati == 3)
         {
             FineGara.SetActive(true);
         }
