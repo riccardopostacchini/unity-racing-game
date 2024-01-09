@@ -10,6 +10,8 @@ public class FineGara : MonoBehaviour
     public GameObject ViewModes;
     public GameObject BGMLivello;
     public GameObject TriggerCompleto;
+    public GameObject BoxGiri;
+    public GameObject BoxTimer;
     public AudioSource MusicaFinish;
 
     private void OnTriggerEnter(Collider other)
@@ -18,6 +20,8 @@ public class FineGara : MonoBehaviour
         Auto.SetActive(false);
         TriggerCompleto.SetActive(false);
         ControllerAuto.MoveSpeed = 0.0f;
+        BoxGiri.SetActive(false);
+        BoxTimer.SetActive(false);
         Auto.GetComponent<ControllerAuto>().enabled = false;
         Auto.SetActive(true);
         CameraFinish.SetActive(true);

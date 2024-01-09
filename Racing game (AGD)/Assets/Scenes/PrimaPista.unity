@@ -167,7 +167,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 278615ff01e9e774798760a7b1cb0893, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -288,6 +288,8 @@ MonoBehaviour:
   ViewModes: {fileID: 2125534084}
   BGMLivello: {fileID: 63746961}
   TriggerCompleto: {fileID: 170818015}
+  BoxGiri: {fileID: 1193464464}
+  BoxTimer: {fileID: 1036631729}
   MusicaFinish: {fileID: 1537848284}
 --- !u!65 &68941052
 BoxCollider:
@@ -2455,7 +2457,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4a806bb64756cad43b1a1f9ad46ae993, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2927,7 +2929,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5b1e7b2be1333c419d14c5d701d2a62, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3262,7 +3264,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cb081373bf7146b449f71abedf7fddd0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
