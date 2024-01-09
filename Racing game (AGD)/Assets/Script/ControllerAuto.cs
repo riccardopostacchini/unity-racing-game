@@ -5,8 +5,8 @@ using UnityEngine;
 public class ControllerAuto : MonoBehaviour
 {
     // Settings
-    public float MoveSpeed = 50;
-    public float MaxSpeed = 15;
+    public  static float MoveSpeed = 100;
+    public  float MaxSpeed = 15;
     public float Drag = 0.98f;
     public float SteerAngle = 20;
     public float Traction = 1;

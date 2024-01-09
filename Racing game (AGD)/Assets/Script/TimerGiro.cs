@@ -14,10 +14,13 @@ public class TimerGiro : MonoBehaviour
     public GameObject BoxSecondi;
     public GameObject BoxMillisecondi;
 
+    public static float RawTime;
+
 
     void Update()
     {
         Millisecondi += Time.deltaTime * 10;
+        RawTime += Time.deltaTime;
         Millidisplay = Millisecondi.ToString("F0");
         BoxMillisecondi.GetComponent<Text> ().text = "" + Millidisplay;
 
