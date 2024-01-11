@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/Men\xF9.unity"
+    guid: 1df1674eaa916424fab1468d9204d6fb
+  - enabled: 1
+    path: Assets/Scenes/PrimaPista.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/SecondaPista.unity
+    guid: 208785da84c45154b860a37169b578bd
+  - enabled: 1
+    path: Assets/Scenes/TerzaPista.unity
+    guid: 490818f36e2bc484aa73ea8a2e8cf227
+  - enabled: 1
+    path: Assets/Scenes/QuartaPista.unity
+    guid: 1e1a516813a182c40bca9225ea2b94b4
+  - enabled: 1
+    path: Assets/Scenes/QuintaPista.unity
+    guid: 316bd68f5ad44a34ea1ffca60b5d36e4
   m_configObjects: {}
