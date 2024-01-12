@@ -10,11 +10,12 @@ public class ControllerAuto : MonoBehaviour
     public float Drag = 0.98f;
     public float SteerAngle = 20;
     public float Traction = 1;
+    public GameObject Auto;
 
     // Variables
     private Vector3 MoveForce;
 
-    // Update is called once per frame
+    
     void Update()
     {
 
