@@ -30,12 +30,12 @@ public class CountdownScript : MonoBehaviour
         CountDown.SetActive(true);
         yield return new WaitForSeconds(1);
         CountDown.SetActive(false);
-        CountDown.GetComponent<Text>().text = "2";
+        CountDown.GetComponent<Text>().text = "2";       
         GetReady.Play();
         CountDown.SetActive(true);
         yield return new WaitForSeconds(1);
         CountDown.SetActive(false);
-        CountDown.GetComponent<Text>().text = "1";
+        CountDown.GetComponent<Text>().text = "1"; 
         GetReady.Play();
         CountDown.SetActive(true);
         yield return new WaitForSeconds(1);

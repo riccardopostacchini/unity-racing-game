@@ -169,7 +169,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -598,6 +598,37 @@ MonoBehaviour:
   GiriCompletati: 0
   RawTime: 0
   FineGara: {fileID: 68941050}
+--- !u!1 &204596145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 204596146}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &204596146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204596145}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 14.169, y: 8.55, z: 4.005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &250669035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,6 +1256,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506531278}
   m_CullTransparentMesh: 1
+--- !u!1 &580252189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 842cd6a1c4d8bcc439dd2a3a517c0745, type: 3}
+  m_PrefabInstance: {fileID: 1997751496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &580252191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580252189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5663e88c72a3b841b8b841562482c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ControlliAuto: {fileID: 1553926442}
+  CarUserControl: {fileID: 1335116490}
 --- !u!1 &614113610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7361661425273925740, guid: 842cd6a1c4d8bcc439dd2a3a517c0745, type: 3}
@@ -3918,6 +3968,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 842cd6a1c4d8bcc439dd2a3a517c0745, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 580252191}
     - targetCorrespondingSourceObject: {fileID: -7361661425273925740, guid: 842cd6a1c4d8bcc439dd2a3a517c0745, type: 3}
       insertIndex: -1
       addedObject: {fileID: 614113614}
@@ -4696,3 +4749,4 @@ SceneRoots:
   - {fileID: 877993908}
   - {fileID: 1456189286}
   - {fileID: 2000311411}
+  - {fileID: 204596146}

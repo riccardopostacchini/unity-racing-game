@@ -9,6 +9,7 @@ public class ManagerControlliAuto : MonoBehaviour
 
 void Start () {
 
-     CarControl.GetComponent<ControllerAuto>().enabled = true;
+    
+    CarControl.GetComponent<ControllerAuto>().enabled = true;
 }
 }
