@@ -18,6 +18,7 @@ public class CountdownScript : MonoBehaviour
         StartCoroutine(CountStart());
         TimerGiro.SetActive(false);
         CarUserControl.GetComponent<ControllerAuto>().enabled = false;
+        ControllerAuto.MoveSpeed = 0.0f;
     }
 
     IEnumerator CountStart ()
@@ -46,6 +47,9 @@ public class CountdownScript : MonoBehaviour
         LevelMusic.Play();
         TimerGiro.SetActive(true);
         CarUserControl.GetComponent<ControllerAuto>().enabled = true;
+        ControllerAuto.MoveSpeed = 100.0f;
+        
+
     }
     
 }
