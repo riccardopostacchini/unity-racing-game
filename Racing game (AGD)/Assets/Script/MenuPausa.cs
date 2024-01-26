@@ -10,7 +10,8 @@ public class MenuPausa : MonoBehaviour
     public static bool inPausa;
     void Start()
     {
-        Pausa.SetActive(false);
+        RiprendiGioco();
+        
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class MenuPausa : MonoBehaviour
                 PausaGioco();
             }
         }
+        
     }
 
     public void PausaGioco()
@@ -54,6 +56,6 @@ public class MenuPausa : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-       
+        
     }
 }

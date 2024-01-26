@@ -18,9 +18,31 @@ public class CaricaTempoGiro : MonoBehaviour
         Secondi = PlayerPrefs.GetInt("SecSave");
         Millisecondi = PlayerPrefs.GetFloat("MilliSave");
 
-        DisplayMinuti.GetComponent<Text>().text = "" + Minuti + ":";
-        DisplaySecondi.GetComponent<Text>().text = "" + Secondi + ".";
-        DisplayMillisecondi.GetComponent<Text>().text = "" + Millisecondi;
+        if (Minuti <= 9)
+        {
+            DisplayMinuti.GetComponent<Text>().text = "0" + Minuti + ":";
+        }
+        else
+        {
+            DisplayMinuti.GetComponent<Text>().text = "" + Minuti + ":";
+        }
+        if (Secondi <= 9)
+        {
+            DisplaySecondi.GetComponent<Text>().text = "0" + Secondi + "."; 
+        }
+        else
+        {
+            DisplaySecondi.GetComponent<Text>().text = "" + Secondi + ".";
+        }
+        if (Millisecondi <= 9)
+        {
+            DisplayMillisecondi.GetComponent<Text>().text = "0" + Millisecondi;
+        }
+        else
+        {
+            DisplayMillisecondi.GetComponent<Text>().text = "" + Millisecondi;
+        }
+            
     }
 
 }

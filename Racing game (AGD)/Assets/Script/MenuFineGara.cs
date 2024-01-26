@@ -20,9 +20,31 @@ public class MenuFineGara : MonoBehaviour
         SecondiRecord = PlayerPrefs.GetInt("SecSave");
         MillisecondiRecord = PlayerPrefs.GetFloat("MilliSave");
 
-        DisplayMinuti.GetComponent<Text>().text = "" + MinutiRecord + ":";
-        DisplaySecondi.GetComponent<Text>().text = "" + SecondiRecord + ".";
-        DisplayMillisecondi.GetComponent<Text>().text = "" + MillisecondiRecord;
+        if (MinutiRecord <= 9)
+        {
+            DisplayMinuti.GetComponent<Text>().text = "0" + MinutiRecord + ":"; 
+        }
+        else
+        {
+            DisplayMinuti.GetComponent<Text>().text = "" + MinutiRecord + ":";
+        }
+        if (SecondiRecord <= 9)
+        {
+            DisplaySecondi.GetComponent<Text>().text = "0" + SecondiRecord + ".";
+        }
+        else
+        {
+            DisplaySecondi.GetComponent<Text>().text = "" + SecondiRecord + ".";
+        }
+        if (MillisecondiRecord <= 9)
+        {
+            DisplayMillisecondi.GetComponent<Text>().text = "0" + MillisecondiRecord;
+        }
+        else
+        {
+            DisplayMillisecondi.GetComponent<Text>().text = "" + MillisecondiRecord;
+        }
+            
 
 
     }
