@@ -4271,7 +4271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6771893473889903135, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.268
+      value: 8.271
       objectReference: {fileID: 0}
     - target: {fileID: 6771893473889903135, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4283,7 +4283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6771893473889903135, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6771893473889903135, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4395,7 +4395,7 @@ MonoBehaviour:
   Drag: 0.98
   SteerAngle: 20
   Traction: 1
-  Auto: {fileID: 1797719495}
+  Auto: {fileID: 0}
 --- !u!54 &1797719498
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4442,8 +4442,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 90, y: 50, z: 150}
-  m_Center: {x: 0, y: 27, z: -10}
+  m_Size: {x: 79.54301, y: 26.482296, z: 151.244}
+  m_Center: {x: -3.2600164, y: 17.50865, z: -17.863972}
 --- !u!1 &1896065911
 GameObject:
   m_ObjectHideFlags: 0

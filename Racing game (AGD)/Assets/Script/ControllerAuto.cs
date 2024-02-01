@@ -5,8 +5,8 @@ using UnityEngine;
 public class ControllerAuto : MonoBehaviour
 {
     // Settings
-    public  static float MoveSpeed = 100;
-    public  float MaxSpeed = 15;
+    public static float MoveSpeed = 100;
+    public float MaxSpeed = 15;
     public float Drag = 0.98f;
     public float SteerAngle = 20;
     public float Traction = 1;
@@ -15,7 +15,7 @@ public class ControllerAuto : MonoBehaviour
     // Variables
     private Vector3 MoveForce;
 
-    
+
     void Update()
     {
         if (!MenuPausa.inPausa)
