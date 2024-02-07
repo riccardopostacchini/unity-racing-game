@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     public GameObject M3 = new GameObject();
     public GameObject M4 = new GameObject();
     public GameObject M5 = new GameObject();
-
+    public GameObject Intro = new GameObject();
 
     public void Esci()
     {
@@ -22,11 +22,6 @@ public class Menu : MonoBehaviour
     public void Opzioni()
     {
        
-    }
-
-    public void Record()
-    {
-        
     }
 
     public void Indietro()
@@ -85,4 +80,5 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + Mappa);
     }
+
 }
