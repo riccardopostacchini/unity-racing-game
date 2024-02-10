@@ -19,11 +19,6 @@ public class Menu : MonoBehaviour
         Debug.Log("Player Has Quit The Game");
     }
 
-    public void Opzioni()
-    {
-       
-    }
-
     public void Indietro()
     {
         if(Mappa!=1)
