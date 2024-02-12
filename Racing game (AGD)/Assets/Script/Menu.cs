@@ -10,8 +10,6 @@ public class Menu : MonoBehaviour
     public GameObject M2 = new GameObject();
     public GameObject M3 = new GameObject();
     public GameObject M4 = new GameObject();
-    public GameObject M5 = new GameObject();
-    public GameObject Intro = new GameObject();
 
     public void Esci()
     {
