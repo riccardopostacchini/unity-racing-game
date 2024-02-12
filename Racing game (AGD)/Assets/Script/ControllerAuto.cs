@@ -10,7 +10,7 @@ public class ControllerAuto : MonoBehaviour
     private bool isBreaking;
 
     // Settings
-    [SerializeField] private float motorForce, breakForce, maxSteerAngle;
+    [SerializeField] public static float motorForce = 1000, breakForce = 3000, maxSteerAngle = 30;
 
     // Wheel Colliders
     [SerializeField] private WheelCollider frontLeftWheelCollider, frontRightWheelCollider;
