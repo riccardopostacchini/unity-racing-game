@@ -33,23 +33,19 @@ public class Menu : MonoBehaviour
         {
             M2.SetActive(true);
         }
-        if(Mappa==2)
+        if(Mappa==3)
         {
             M3.SetActive(true);
         }
-        if(Mappa==3)
-        {
-            M4.SetActive(true);
-        }
         if(Mappa==4)
         {
-            M5.SetActive(true);
+            M4.SetActive(true);
         }
     }
     
     public void Avanti()
     {
-        if(Mappa!=5)
+        if(Mappa!=4)
         {
             Mappa = Mappa + 1;
         }
@@ -64,10 +60,6 @@ public class Menu : MonoBehaviour
         if(Mappa==4)
         {
             M3.SetActive(false);
-        }
-        if(Mappa==5)
-        {
-            M4.SetActive(false);
         }
     }
     

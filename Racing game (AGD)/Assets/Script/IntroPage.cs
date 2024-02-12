@@ -17,7 +17,7 @@ public class IntroPage : MonoBehaviour
 
     IEnumerator sec()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         pmenu.SetActive(true);
         intro.SetActive(false);
         StopCoroutine(sec());
