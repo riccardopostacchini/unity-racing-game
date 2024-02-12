@@ -13,12 +13,12 @@ public class CountdownScript : MonoBehaviour
     public GameObject CarUserControl;
     public AudioSource LevelMusic;
     
+
     void Start()
     {
         StartCoroutine(CountStart());
         TimerGiroObj.SetActive(false);
         CarUserControl.GetComponent<ControllerAuto>().enabled = false;
-        ControllerAuto.MoveSpeed = 0.0f;
         TimerGiro.Minuti = 0;
         TimerGiro.Secondi = 0;
         TimerGiro.Millisecondi = 0;
@@ -50,8 +50,11 @@ public class CountdownScript : MonoBehaviour
         LevelMusic.Play();
         TimerGiroObj.SetActive(true);
         CarUserControl.GetComponent<ControllerAuto>().enabled = true;
-        ControllerAuto.MoveSpeed = 100.0f;
         
+
+        
+
+
 
     }
     
