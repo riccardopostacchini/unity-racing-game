@@ -20,7 +20,7 @@ public class FineGara : MonoBehaviour
         this.GetComponent<BoxCollider>().enabled = false;
         Auto.SetActive(false);
         TriggerCompleto.SetActive(false);
-        /*ControllerAuto.MoveSpeed = 0.0f; */
+        
          BoxGiri.SetActive(false);
         BoxTimer.SetActive(false);
         Auto.GetComponent<ControllerAuto>().enabled = false;

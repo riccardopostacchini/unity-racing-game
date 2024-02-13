@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CaricaTempoGiro : MonoBehaviour
 {
@@ -14,9 +15,9 @@ public class CaricaTempoGiro : MonoBehaviour
 
     void Start()
     {
-        Minuti = PlayerPrefs.GetInt("MinSave");
-        Secondi = PlayerPrefs.GetInt("SecSave");
-        Millisecondi = PlayerPrefs.GetFloat("MilliSave");
+        Minuti = PlayerPrefs.GetInt("MinSave" + SceneManager.GetActiveScene().buildIndex);
+        Secondi = PlayerPrefs.GetInt("SecSave" + SceneManager.GetActiveScene().buildIndex);
+        Millisecondi = PlayerPrefs.GetFloat("MilliSave" + SceneManager.GetActiveScene().buildIndex);
 
         if (Minuti <= 9)
         {

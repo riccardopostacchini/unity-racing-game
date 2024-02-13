@@ -16,9 +16,9 @@ public class MenuFineGara : MonoBehaviour
 
     private void Start()
     {
-        MinutiRecord = PlayerPrefs.GetInt("MinSave");
-        SecondiRecord = PlayerPrefs.GetInt("SecSave");
-        MillisecondiRecord = PlayerPrefs.GetFloat("MilliSave");
+        MinutiRecord = PlayerPrefs.GetInt("MinSave" + SceneManager.GetActiveScene().buildIndex);
+        SecondiRecord = PlayerPrefs.GetInt("SecSave" + SceneManager.GetActiveScene().buildIndex);
+        MillisecondiRecord = PlayerPrefs.GetFloat("MilliSave" + SceneManager.GetActiveScene().buildIndex);
 
         if (MinutiRecord <= 9)
         {
