@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: c487403e709a62e48b0c89c3fadd3775, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 096be19f838addd45821efc82508c187, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.49347693, g: 0.5789498, b: 0.7051965, a: 1}
+<<<<<<< Updated upstream
+  m_IndirectSpecularColor: {r: 0.49351555, g: 0.57894737, b: 0.7053764, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.48099494, g: 0.5288351, b: 0.58156776, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1412,7 +1416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598465724}
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0.66, y: 2.84, z: -6.6}
+  m_LocalPosition: {x: 0.66, y: 3.4, z: -8.2}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2349,6 +2353,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 6017526924511828362, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -3846018093981099296, guid: 842cd6a1c4d8bcc439dd2a3a517c0745, type: 3}
     - target: {fileID: 6744674290617812391, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2489,6 +2497,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8447206396334711974, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6087771358165109452, guid: 842cd6a1c4d8bcc439dd2a3a517c0745, type: 3}
     - target: {fileID: 9201449265781337110, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.4299696
@@ -3653,8 +3665,13 @@ AudioSource:
   m_GameObject: {fileID: 1131126470}
   m_Enabled: 1
   serializedVersion: 4
+<<<<<<< Updated upstream
   OutputAudioMixerGroup: {fileID: 24300002, guid: ecb536d015f76814895c5ccdcb369350, type: 2}
   m_audioClip: {fileID: 8300000, guid: 278615ff01e9e774798760a7b1cb0893, type: 3}
+=======
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 07459df9a31935a4fa4bdb0b02d02439, type: 3}
+>>>>>>> Stashed changes
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -5994,14 +6011,14 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -6051,14 +6068,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941750933}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.64236397, y: -0.13034429, z: 0.24735361, w: 0.7135791}
+  m_LocalPosition: {x: 5.22, y: 12.36, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 78.884, y: 43.109, z: 74.239}
 --- !u!1 &1944989699
 GameObject:
   m_ObjectHideFlags: 0
