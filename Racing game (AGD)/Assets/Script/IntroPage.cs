@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class IntroPage : MonoBehaviour
 {
-    public GameObject intro = new GameObject();
-    public GameObject pmenu = new GameObject();
+    public GameObject intro ;
+    public GameObject pmenu ;
 
     void Update()
     {

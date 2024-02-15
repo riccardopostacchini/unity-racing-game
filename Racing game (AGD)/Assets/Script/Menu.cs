@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public int Mappa = 1;
-    public GameObject M1 = new GameObject();
-    public GameObject M2 = new GameObject();
-    public GameObject M3 = new GameObject();
-    public GameObject M4 = new GameObject();
+    public GameObject M1 ;
+    public GameObject M2 ;
+    public GameObject M3 ;
+    public GameObject M4 ;
 
     public void Esci()
     {
