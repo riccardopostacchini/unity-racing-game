@@ -3662,7 +3662,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: ecb536d015f76814895c5ccdcb369350, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 07459df9a31935a4fa4bdb0b02d02439, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 46d407fd78f9e2a4fa45ddf995e22007, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -4035,6 +4035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a12ae35d5789b4cb276f683bea49d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motorForce: 1000
+  breakForce: 3000
+  maxSteerAngle: 5
   frontLeftWheelCollider: {fileID: 257107831}
   frontRightWheelCollider: {fileID: 980898983}
   rearLeftWheelCollider: {fileID: 765770712}
@@ -4053,7 +4056,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1000
   m_Drag: 0.3
-  m_AngularDrag: 3
+  m_AngularDrag: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
