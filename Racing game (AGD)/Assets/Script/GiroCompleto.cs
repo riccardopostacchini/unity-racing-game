@@ -37,7 +37,7 @@ public class GiroCompleto : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GiriCompletati += 1;
-        RawTime = PlayerPrefs.GetFloat("RawTime");
+        RawTime = PlayerPrefs.GetFloat("RawTime" + SceneManager.GetActiveScene().buildIndex);
         if (TimerGiro.RawTime <= RawTime)
         {
             if (TimerGiro.Secondi <= 9)
