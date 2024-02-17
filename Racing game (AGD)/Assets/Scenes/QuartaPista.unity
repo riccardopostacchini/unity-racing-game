@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12776956, g: 0.11618898, b: 0.09450079, a: 1}
+  m_IndirectSpecularColor: {r: 0.12782449, g: 0.11620348, b: 0.09448763, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motorForce: 1000
   breakForce: 3000
-  maxSteerAngle: 10
+  maxSteerAngle: 8.5
   frontLeftWheelCollider: {fileID: 1467681781}
   frontRightWheelCollider: {fileID: 1862386729}
   rearLeftWheelCollider: {fileID: 2059758952}
@@ -449,7 +449,7 @@ Rigidbody:
   m_GameObject: {fileID: 92827854}
   serializedVersion: 4
   m_Mass: 1000
-  m_Drag: 0.3
+  m_Drag: 0.4
   m_AngularDrag: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}

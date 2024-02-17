@@ -8,13 +8,13 @@ public class FuoriStrada : MonoBehaviour
     public Rigidbody Auto;
     private void OnTriggerEnter(Collider other)
     {
-        Auto.drag = 1f;
-        Debug.Log("Velocità diminuita");
+        Auto.drag = 0.7f;
+        Debug.Log("Velocitï¿½ diminuita");
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Auto.drag = 0.3f;
-        Debug.Log("Velocità aumentata"); 
+        Auto.drag = 0.4f;
+        Debug.Log("Velocitï¿½ aumentata"); 
     }
 }
