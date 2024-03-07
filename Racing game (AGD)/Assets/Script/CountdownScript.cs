@@ -8,16 +8,20 @@ public class CountdownScript : MonoBehaviour
     public GameObject CountDown;
     public AudioSource GetReady;
     public AudioSource GoAudio;
-    public GameObject TimerGiro;
+    public GameObject TimerGiroObj;
     public GameObject ControlliAuto;
     public GameObject CarUserControl;
     public AudioSource LevelMusic;
     
+
     void Start()
     {
         StartCoroutine(CountStart());
-        TimerGiro.SetActive(false);
+        TimerGiroObj.SetActive(false);
         CarUserControl.GetComponent<ControllerAuto>().enabled = false;
+        TimerGiro.Minuti = 0;
+        TimerGiro.Secondi = 0;
+        TimerGiro.Millisecondi = 0;
     }
 
     IEnumerator CountStart ()
@@ -44,8 +48,14 @@ public class CountdownScript : MonoBehaviour
         GoAudio.Play();
         CountDown.SetActive(true);
         LevelMusic.Play();
-        TimerGiro.SetActive(true);
+        TimerGiroObj.SetActive(true);
         CarUserControl.GetComponent<ControllerAuto>().enabled = true;
+        
+
+        
+
+
+
     }
     
 }

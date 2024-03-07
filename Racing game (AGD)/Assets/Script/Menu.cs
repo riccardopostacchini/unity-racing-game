@@ -6,27 +6,15 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public int Mappa = 1;
-    public GameObject M1 = new GameObject();
-    public GameObject M2 = new GameObject();
-    public GameObject M3 = new GameObject();
-    public GameObject M4 = new GameObject();
-    public GameObject M5 = new GameObject();
-
+    public GameObject M1 ;
+    public GameObject M2 ;
+    public GameObject M3 ;
+    public GameObject M4 ;
 
     public void Esci()
     {
         Application.Quit();
         Debug.Log("Player Has Quit The Game");
-    }
-
-    public void Opzioni()
-    {
-       
-    }
-
-    public void Record()
-    {
-        
     }
 
     public void Indietro()
@@ -43,23 +31,19 @@ public class Menu : MonoBehaviour
         {
             M2.SetActive(true);
         }
-        if(Mappa==2)
+        if(Mappa==3)
         {
             M3.SetActive(true);
         }
-        if(Mappa==3)
-        {
-            M4.SetActive(true);
-        }
         if(Mappa==4)
         {
-            M5.SetActive(true);
+            M4.SetActive(true);
         }
     }
     
     public void Avanti()
     {
-        if(Mappa!=5)
+        if(Mappa!=4)
         {
             Mappa = Mappa + 1;
         }
@@ -75,14 +59,11 @@ public class Menu : MonoBehaviour
         {
             M3.SetActive(false);
         }
-        if(Mappa==5)
-        {
-            M4.SetActive(false);
-        }
     }
     
     public void Inizia()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + Mappa);
     }
+
 }

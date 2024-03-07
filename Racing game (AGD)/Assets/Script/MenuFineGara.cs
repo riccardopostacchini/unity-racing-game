@@ -16,13 +16,35 @@ public class MenuFineGara : MonoBehaviour
 
     private void Start()
     {
-        MinutiRecord = PlayerPrefs.GetInt("MinSave");
-        SecondiRecord = PlayerPrefs.GetInt("SecSave");
-        MillisecondiRecord = PlayerPrefs.GetFloat("MilliSave");
+        MinutiRecord = PlayerPrefs.GetInt("MinSave" + SceneManager.GetActiveScene().buildIndex);
+        SecondiRecord = PlayerPrefs.GetInt("SecSave" + SceneManager.GetActiveScene().buildIndex);
+        MillisecondiRecord = PlayerPrefs.GetFloat("MilliSave" + SceneManager.GetActiveScene().buildIndex);
 
-        DisplayMinuti.GetComponent<Text>().text = "" + MinutiRecord + ":";
-        DisplaySecondi.GetComponent<Text>().text = "" + SecondiRecord + ".";
-        DisplayMillisecondi.GetComponent<Text>().text = "" + MillisecondiRecord;
+        if (MinutiRecord <= 9)
+        {
+            DisplayMinuti.GetComponent<Text>().text = "0" + MinutiRecord + ":"; 
+        }
+        else
+        {
+            DisplayMinuti.GetComponent<Text>().text = "" + MinutiRecord + ":";
+        }
+        if (SecondiRecord <= 9)
+        {
+            DisplaySecondi.GetComponent<Text>().text = "0" + SecondiRecord + ".";
+        }
+        else
+        {
+            DisplaySecondi.GetComponent<Text>().text = "" + SecondiRecord + ".";
+        }
+        if (MillisecondiRecord <= 9)
+        {
+            DisplayMillisecondi.GetComponent<Text>().text = "0" + MillisecondiRecord;
+        }
+        else
+        {
+            DisplayMillisecondi.GetComponent<Text>().text = "" + MillisecondiRecord;
+        }
+            
 
 
     }

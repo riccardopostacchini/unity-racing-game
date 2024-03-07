@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GiroCompleto : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class GiroCompleto : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GiriCompletati += 1;
-        RawTime = PlayerPrefs.GetFloat("RawTime");
+        RawTime = PlayerPrefs.GetFloat("RawTime" + SceneManager.GetActiveScene().buildIndex);
         if (TimerGiro.RawTime <= RawTime)
         {
             if (TimerGiro.Secondi <= 9)
@@ -60,10 +61,10 @@ public class GiroCompleto : MonoBehaviour
             Millisecondi.GetComponent<Text>().text = "" + TimerGiro.Millisecondi;
         }
     
-            PlayerPrefs.SetInt("MinSave", TimerGiro.Minuti);
-            PlayerPrefs.SetInt("SecSave", TimerGiro.Secondi);
-            PlayerPrefs.SetFloat("MilliSave", TimerGiro.Millisecondi);
-            PlayerPrefs.SetFloat("RawTime", TimerGiro.RawTime);
+            PlayerPrefs.SetInt("MinSave" + SceneManager.GetActiveScene().buildIndex, TimerGiro.Minuti);
+            PlayerPrefs.SetInt("SecSave" + SceneManager.GetActiveScene().buildIndex, TimerGiro.Secondi);
+            PlayerPrefs.SetFloat("MilliSave" + SceneManager.GetActiveScene().buildIndex, TimerGiro.Millisecondi);
+            PlayerPrefs.SetFloat("RawTime" + SceneManager.GetActiveScene().buildIndex, TimerGiro.RawTime);
 
        
         TimerGiro.Minuti = 0;

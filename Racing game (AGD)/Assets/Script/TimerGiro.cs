@@ -47,11 +47,11 @@ public class TimerGiro : MonoBehaviour
 
         if (Minuti <= 9)
         {
-            BoxMinuti.GetComponent<Text>().text = "0" + Minuti + ".";
+            BoxMinuti.GetComponent<Text>().text = "0" + Minuti + ":";
         }
         else
         {
-            BoxMinuti.GetComponent<Text>().text = "" + Minuti + ".";
+            BoxMinuti.GetComponent<Text>().text = "" + Minuti + ":";
         }
     }
 }

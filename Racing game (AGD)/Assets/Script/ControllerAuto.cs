@@ -1,39 +1,82 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ControllerAuto : MonoBehaviour
 {
+    private float horizontalInput, verticalInput;
+    private float currentSteerAngle, currentbreakForce;
+    private bool isBreaking;
+
     // Settings
-    public  static float MoveSpeed = 100;
-    public  float MaxSpeed = 15;
-    public float Drag = 0.98f;
-    public float SteerAngle = 20;
-    public float Traction = 1;
-    public GameObject Auto;
+    [SerializeField] public float motorForce, breakForce, maxSteerAngle;
 
-    // Variables
-    private Vector3 MoveForce;
+    // Wheel Colliders
+    [SerializeField] private WheelCollider frontLeftWheelCollider, frontRightWheelCollider;
+    [SerializeField] private WheelCollider rearLeftWheelCollider, rearRightWheelCollider;
 
-    
-    void Update()
+    // Wheels
+    [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
+    [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
+
+    private void FixedUpdate()
     {
+        GetInput();
+        HandleMotor();
+        HandleSteering();
+        UpdateWheels();
+    }
 
-        // Moving
-        MoveForce += transform.forward * MoveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
-        transform.position += MoveForce * Time.deltaTime;
+    private void GetInput()
+    {
+        // Steering Input
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        // Steering
-        float steerInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up * steerInput * MoveForce.magnitude * SteerAngle * Time.deltaTime);
+        // Acceleration Input
+        verticalInput = Input.GetAxis("Vertical");
 
-        // Drag and max speed limit
-        MoveForce *= Drag;
-        MoveForce = Vector3.ClampMagnitude(MoveForce, MaxSpeed);
+        // Breaking Input
+        isBreaking = Input.GetKey(KeyCode.Space);
+    }
 
-        // Traction
-        Debug.DrawRay(transform.position, MoveForce.normalized * 3);
-        Debug.DrawRay(transform.position, transform.forward * 3, Color.blue);
-        MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime) * MoveForce.magnitude;
+    private void HandleMotor()
+    {
+        frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
+        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
+        currentbreakForce = isBreaking ? breakForce : 0f;
+        ApplyBreaking();
+    }
+
+    private void ApplyBreaking()
+    {
+        frontRightWheelCollider.brakeTorque = currentbreakForce;
+        frontLeftWheelCollider.brakeTorque = currentbreakForce;
+        rearLeftWheelCollider.brakeTorque = currentbreakForce;
+        rearRightWheelCollider.brakeTorque = currentbreakForce;
+    }
+
+    private void HandleSteering()
+    {
+        currentSteerAngle = maxSteerAngle * horizontalInput;
+        frontLeftWheelCollider.steerAngle = currentSteerAngle;
+        frontRightWheelCollider.steerAngle = currentSteerAngle;
+    }
+
+    private void UpdateWheels()
+    {
+        UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
+        UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
+        UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
+        UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
+    }
+
+    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
+    {
+        Vector3 pos;
+        Quaternion rot;
+        wheelCollider.GetWorldPose(out pos, out rot);
+        wheelTransform.rotation = rot;
+        wheelTransform.position = pos;
     }
 }
