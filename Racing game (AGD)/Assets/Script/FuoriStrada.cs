@@ -6,20 +6,30 @@ public class FuoriStrada : MonoBehaviour
 {
     public GameObject FuoriPista;
     public Rigidbody Auto;
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        Auto.drag = 0.4f;
-        Debug.Log("Velocita normale");
+        if (other.CompareTag("ColliderFuoriPista"))
+        {
+            Auto.drag = 0.7f;
+            Debug.Log("Velocita abbassata");
+        }
     }
 
-    void OnCollisionStay(Collision collision)
+    void OnTriggerStay(Collider other)
     {
-        Auto.drag = 0.4f;
-        Debug.Log("Velocita tenuta normale");
+        if (other.CompareTag("ColliderFuoriPista"))
+        {
+            Auto.drag = 0.7f;
+            Debug.Log("Velocita tenuta bassa");
+        }
     }
-    void OnCollisionExit(Collision collision)
+
+    void OnTriggerExit(Collider other)
     {
-        Auto.drag = 0.7f;
-        Debug.Log("Velocita diminuita");
+        if (other.CompareTag("ColliderFuoriPista"))
+        {
+            Auto.drag = 0.4f;
+            Debug.Log("Velocita normale");
+        }
     }
 }

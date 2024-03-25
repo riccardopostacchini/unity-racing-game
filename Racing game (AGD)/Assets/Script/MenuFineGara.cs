@@ -14,7 +14,7 @@ public class MenuFineGara : MonoBehaviour
     public GameObject DisplayMillisecondi;
 
 
-    private void Start()
+    private void Update()
     {
         MinutiRecord = PlayerPrefs.GetInt("MinSave" + SceneManager.GetActiveScene().buildIndex);
         SecondiRecord = PlayerPrefs.GetInt("SecSave" + SceneManager.GetActiveScene().buildIndex);
