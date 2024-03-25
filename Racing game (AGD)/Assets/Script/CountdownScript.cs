@@ -50,7 +50,7 @@ public class CountdownScript : MonoBehaviour
         LevelMusic.Play();
         TimerGiroObj.SetActive(true);
         CarUserControl.GetComponent<PrometeoCarController>().enabled = true;
-        CarUserControl.GetComponent<ControllerAuto>().enabled = true;
+        
 
 
 

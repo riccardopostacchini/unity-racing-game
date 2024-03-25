@@ -3483,6 +3483,10 @@ PrefabInstance:
       value: Auto
       objectReference: {fileID: 0}
     - target: {fileID: 2722337880790767740, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722337880790767740, guid: a73e6ae087686ab408a5656bbb2c067a, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}

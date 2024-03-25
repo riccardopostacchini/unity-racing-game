@@ -11,6 +11,6 @@ void Start () {
 
     
     CarControl.GetComponent<PrometeoCarController>().enabled = true;
-    CarControl.GetComponent<ControllerAuto>().enabled = true;
+    
     }
 }
