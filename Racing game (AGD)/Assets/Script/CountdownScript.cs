@@ -18,7 +18,7 @@ public class CountdownScript : MonoBehaviour
     {
         StartCoroutine(CountStart());
         TimerGiroObj.SetActive(false);
-        CarUserControl.GetComponent<ControllerAuto>().enabled = false;
+        CarUserControl.GetComponent<PrometeoCarController>().enabled = false;
         TimerGiro.Minuti = 0;
         TimerGiro.Secondi = 0;
         TimerGiro.Millisecondi = 0;
@@ -49,10 +49,11 @@ public class CountdownScript : MonoBehaviour
         CountDown.SetActive(true);
         LevelMusic.Play();
         TimerGiroObj.SetActive(true);
+        CarUserControl.GetComponent<PrometeoCarController>().enabled = true;
         CarUserControl.GetComponent<ControllerAuto>().enabled = true;
-        
 
-        
+
+
 
 
 

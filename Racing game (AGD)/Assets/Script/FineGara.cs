@@ -23,6 +23,7 @@ public class FineGara : MonoBehaviour
         
          BoxGiri.SetActive(false);
         BoxTimer.SetActive(false);
+        Auto.GetComponent<PrometeoCarController>().enabled = false;
         Auto.GetComponent<ControllerAuto>().enabled = false;
         Auto.SetActive(true);
         CameraFinish.SetActive(true);

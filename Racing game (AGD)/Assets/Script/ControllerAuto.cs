@@ -10,7 +10,7 @@ public class ControllerAuto : MonoBehaviour
     private bool isBreaking;
 
     // Settings
-    [SerializeField] public float motorForce, breakForce, maxSteerAngle;
+    [SerializeField] public float motorForce;
 
     // Wheel Colliders
     [SerializeField] private WheelCollider frontLeftWheelCollider, frontRightWheelCollider;
@@ -24,7 +24,6 @@ public class ControllerAuto : MonoBehaviour
     {
         GetInput();
         HandleMotor();
-        HandleSteering();
         UpdateWheels();
     }
 
@@ -35,16 +34,13 @@ public class ControllerAuto : MonoBehaviour
 
         // Acceleration Input
         verticalInput = Input.GetAxis("Vertical");
-
-        // Breaking Input
-        isBreaking = Input.GetKey(KeyCode.Space);
     }
 
     private void HandleMotor()
     {
         frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
         frontRightWheelCollider.motorTorque = verticalInput * motorForce;
-        currentbreakForce = isBreaking ? breakForce : 0f;
+        
         ApplyBreaking();
     }
 
@@ -56,12 +52,6 @@ public class ControllerAuto : MonoBehaviour
         rearRightWheelCollider.brakeTorque = currentbreakForce;
     }
 
-    private void HandleSteering()
-    {
-        currentSteerAngle = maxSteerAngle * horizontalInput;
-        frontLeftWheelCollider.steerAngle = currentSteerAngle;
-        frontRightWheelCollider.steerAngle = currentSteerAngle;
-    }
 
     private void UpdateWheels()
     {
